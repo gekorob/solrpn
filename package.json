@@ -1,0 +1,25 @@
+{
+  "name": "solrpn",
+  "version": "0.1.0",
+  "description": "Solr query builder using an RPN approach",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gekorob/solrpn.git"
+  },
+  "keywords": [
+    "solr",
+    "query",
+    "rpn",
+    "builder"
+  ],
+  "author": "Roberto Ciatti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gekorob/solrpn/issues"
+  },
+  "homepage": "https://github.com/gekorob/solrpn#readme"
+}
