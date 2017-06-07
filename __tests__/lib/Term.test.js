@@ -1,4 +1,4 @@
-import Term from '../../../lib/solr/Term'
+import Term from '../../lib/Term'
 
 describe('Term tests', () => {
   it('with a one world term', () => {

@@ -4,7 +4,11 @@
   "description": "Solr query builder using an RPN approach",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "build": "webpack",
+    "prepublishOnly": "npm run lint && npm run test && npm run build",
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll"
   },
   "repository": {
     "type": "git",
@@ -16,10 +20,25 @@
     "rpn",
     "builder"
   ],
-  "author": "Roberto Ciatti",
+  "author": "Roberto Ciatti <gekorob@users.noreply.github.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gekorob/solrpn/issues"
   },
-  "homepage": "https://github.com/gekorob/solrpn#readme"
+  "homepage": "https://github.com/gekorob/solrpn#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {}
 }

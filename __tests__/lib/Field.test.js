@@ -1,5 +1,5 @@
 
-import Term from '../../../lib/solr/Field'
+import Term from '../../lib/Field'
 
 describe('Field solr test', () => {
   it('initialize with name and value', () => {
