@@ -1,16 +1,25 @@
-
-import Term from '../../lib/Field'
+import Field, {RangeField} from '../../lib/Field'
 
 describe('Field solr test', () => {
-  it('initialize with name and value', () => {
-    const term = new Term('fname', 'fvalue')
+  describe('Base field', () => {
+    test('initialize with name and value', () => {
+      const field = new Field('fname', 'fvalue')
 
-    expect(term.toString()).toEqual('fname:fvalue')
+      expect(field.toString()).toEqual('fname:fvalue')
+    })
+
+    test('without value the default is * wildcard', () => {
+      const field = new Field('fname')
+
+      expect(field.toString()).toEqual('fname:*')
+    })
   })
 
-  it('without value the default is * wildcard', () => {
-    const term = new Term('fname')
+  describe('Range field', () => {
+    test('initialize with name and values', () => {
+      const range = new RangeField('weight', 20, 40)
 
-    expect(term.toString()).toEqual('fname:*')
+      expect(range.toString()).toEqual('weight:[20 TO 40]')
+    })
   })
 })
